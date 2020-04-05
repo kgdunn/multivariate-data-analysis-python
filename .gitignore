@@ -1,0 +1,6 @@
+__pycache__
+TODO
+
+# Unittesting and coverage checks
+htmlcov/*
+.coverage

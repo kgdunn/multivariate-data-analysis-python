@@ -1,0 +1,22 @@
+{
+	"settings": {
+		//"window.zoomLevel": 0.5,
+		//"files.autoSave": "afterDelay",
+		//https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring
+		//
+		//Press enter after opening docstring with triple quotes (""" or ''')
+		//Keyboard shortcut: ctrl+shift+2 or cmd+shift+2 for mac
+		//Can be changed in Preferences -> Keyboard Shortcuts -> extension.generateDocstring
+		//Command: Generate Docstring
+		//Right click menu: Generate Docstring
+		"autoDocstring.docstringFormat": "google",
+		"autoDocstring.startOnNewLine": true,
+		"autoDocstring.includeExtendedSummary": true,
+		"autoDocstring.generateDocstringOnEnter": true,
+	},
+	"folders": [
+		{
+			"path": "."
+		}
+	]
+}

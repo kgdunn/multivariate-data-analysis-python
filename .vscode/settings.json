@@ -1,0 +1,66 @@
+{
+    // List of extensions to install:
+    // https://marketplace.visualstudio.com/items?itemName=stkb.rewrap
+    // https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring
+    //
+    //
+    "editor.fontFamily": "Consolas, Fira Code, Monaco, 'Courier New', monospace",
+    "editor.cursorBlinking": "phase",
+    "editor.scrollBeyondLastLine": false,
+    "editor.rulers": [
+        99
+    ],
+    "git.enableSmartCommit": true,
+    "python.testing.pytestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s tests",
+        "/tests.",
+        "-p",
+        "*test*.py"
+    ],
+    // Easiest way to get formatting applied
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 3000,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "99"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "100",
+        "--experimental"
+    ],
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{based_on_style: chromium, indent_width: 20}"
+    ],
+    // Disabled, because it does not work for things like: F841: variable 'xx' is assigned to but never used
+    "python.linting.pycodestyleEnabled": false,
+    "python.linting.pycodestyleArgs": [
+        "--ignore=E203,E231", // ignores 0 : N  (spaces around :)
+        //"--ignore=E231", // ignores no space after comma:  [17,] is OK.
+        "--max-line-length=100",
+        "--verbose"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "flake8",
+    // https://lintlyci.github.io/Flake8Rules/rules/E266.html
+    "python.linting.flake8Args": [
+        // E266: 
+        // E203: ignores 0 : N  (spaces around :)
+        // E231: ignores no space after comma:  [17,] is OK.
+        "--ignore=E266, E203, E231",
+        "--max-line-length=100",
+        "--verbose"
+    ],
+    "python.linting.pylintEnabled": false,
+    "python.linting.enabled": true,
+    "python.pythonPath": "/Users/kevindunn/anaconda3/envs/datamore/bin/python",
+    "workbench.statusBar.feedback.visible": true,
+    "restructuredtext.confPath": ""
+}
